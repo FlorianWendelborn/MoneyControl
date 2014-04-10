@@ -21,9 +21,8 @@ exports.check = function (token) {
 exports.add = function (o) {
 	var token = uniqueHash(sessions, 256);
 	sessions[token] = o;
+	return token;
 }
 exports.remove = function (token) {
-	console.log(sessions);
 	delete sessions[token];
-	console.log(sessions);
 }
